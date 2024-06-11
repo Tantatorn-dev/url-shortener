@@ -11,7 +11,7 @@ export default function Home() {
           placeholder="Type URL here"
           className="input input-bordered w-full max-w-xl"
         />
-        <button className="btn btn-primary">Shorten</button>
+        <button type="submit" className="btn btn-primary">Shorten</button>
       </form>
     </main>
   );
