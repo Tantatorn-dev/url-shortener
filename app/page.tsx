@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
 import { useFormState } from "react-dom";
 import { shorten } from "./actions";
 
 export default function Home() {
-  const [state, formAction] = useFormState(shorten, {url: ""});
+  const [state, formAction] = useFormState(shorten, { url: "" });
 
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
@@ -23,17 +23,7 @@ export default function Home() {
           Shorten
         </button>
       </form>
-      {state.url && (
-        <div className="mt-10">
-          <a
-            href={`/${state.url}`}
-            className="text-blue-500 underline"
-            target="_blank"
-          >
-            {`/${state.url}`}
-          </a>
-        </div>
-      )}
+      {state.url && <p className="mt-10">{state.url}</p>}
     </main>
   );
 }

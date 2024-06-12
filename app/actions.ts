@@ -19,5 +19,5 @@ export async function shorten(
   const key = randomBytes(5).toString("hex");
   await client.set(key, url);
 
-  return { url: key };
+  return { url: `localhost:3000/${key}` };
 }
