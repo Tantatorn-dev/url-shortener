@@ -11,8 +11,6 @@ export async function GET(
 
   await client.connect();
 
-  console.log("key", key);
-
   const url = await client.get(key);
 
   if(!url) {
@@ -20,6 +18,5 @@ export async function GET(
     return redirect("/");
   }
 
-  // redirect to the other domain
   return redirect(url);
 }
